@@ -1,0 +1,82 @@
+/* ========================= Default Styles ========================= */
+blockquote,
+.wp-block-quote {
+	border: none;
+	font-size: inherit;
+	margin: unset;
+	padding: 1rem;
+}
+
+blockquote small {
+	font-size: 0.86rem;
+	font-variant: small-caps;
+	text-align: right;
+}
+
+blockquote .ds-expandable-blockquote {
+	padding: 0 0.5rem;
+}
+
+blockquote .ds-expandable-blockquote,
+blockquote.tb-blockquote > p:first-child {
+	border-bottom: var(--color-designink-text) solid 1px;
+}
+
+blockquote .ds-expandable-blockquote::first-line,
+blockquote.tb-blockquote > p:first-child {
+	font-weight: bold;
+}
+
+blockquote .ds-expandable-blockquote .quote-surrounded > p,
+blockquote .ds-expandable-blockquote .quote-surrounded > .quote-end > p {
+	display: inline;
+}
+
+blockquote .ds-expandable-blockquote .quote-surrounded::before {
+	content: "\201C";
+	margin-right: -0.25rem;
+}
+
+blockquote .ds-expandable-blockquote .quote-surrounded::after {
+	content: "\201D";
+	margin-left: -0.25rem;
+}
+
+blockquote.tb-blockquote > p::before {
+	content: "\201C";
+}
+
+blockquote.tb-blockquote > p::after {
+	content: "\201D";
+}
+
+blockquote .ds-expandable-blockquote .quote-end {
+	display: none;
+}
+
+blockquote .ds-expandable-blockquote small {
+	display: inline;
+}
+
+blockquote .ds-expandable-blockquote small a::before {
+	color: var(--color-designink-blue);
+	content: "More";
+}
+
+blockquote .ds-expandable-blockquote small::before {
+	display: none;
+}
+
+/* ========================= Expanded Styles ========================= */
+
+blockquote.expand .ds-expandable-blockquote .ellipsis {
+	display: none;
+}
+
+blockquote.expand .ds-expandable-blockquote small a::before {
+	content: "Less";
+}
+
+blockquote.expand .ds-expandable-blockquote .quote-end {
+	display: inline;
+}

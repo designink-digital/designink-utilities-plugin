@@ -1,0 +1,41 @@
+#cookie-law-info-bar {
+	background-color: rgba(25, 25, 25, 0.9) !important;
+    color: white !important;
+    height: 100%;
+	left: 100%;
+	margin-left: -2rem;
+    max-width: 600px;
+    max-height: 150px;
+    padding: 0;
+	position: fixed !important;
+    top: 100%;
+    transform: translateX(-100%);
+    transition: all 0.66s;
+}
+
+#cookie-law-info-bar.visible {
+	transform: translateX(-100%) translateY(-100%);
+}
+
+#cookie-law-info-bar > span {
+	display: block;
+	left: 0;
+	padding: 2rem;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+}
+
+a#cookie_action_close_header {
+	line-height: unset;
+}
+
+@media(max-width: 767px) {
+
+	#cookie-law-info-bar {
+		margin-left: 0;
+		max-width: unset;
+	}
+
+}

@@ -1,0 +1,366 @@
+/* ========================= Header Styles ========================= */
+
+#top {
+	position: relative;
+	z-index: 3;
+}
+
+.site-header {
+	background: unset;
+	margin: 0 auto;
+	max-width: 1150px;
+}
+
+.header-top {
+	float: right;
+	height: 0;
+	z-index: 3;
+}
+
+.header-nav {
+	background-color: unset;
+}
+
+.header-nav ul {
+	font-size: 0;
+}
+
+.header-nav ul > * {
+	font-size: initial;
+}
+
+.header-content > .wrap {
+	margin: 0;
+	max-width: unset;
+}
+
+/* These icon styles appear in the footer as well */
+.themeblvd-contact-bar.tb-social-icons > li > a,
+.header-top-nav .tb-search-trigger,
+.header-top-nav .tb-cart-trigger {
+	color: inherit;
+}
+
+.themeblvd-contact-bar.tb-social-icons > li > a:hover,
+.header-top-nav .tb-search-trigger:hover,
+.header-top-nav .tb-cart-trigger:hover {
+	color: inherit;
+	opacity: 0.75;
+}
+
+/* --------------- Mobile Header Styles --------------- */
+
+.tb-mobile-header {
+	background: var(--color-designink-blue);
+	color: white;
+	padding: 0.5rem;
+	transition: all 0.25s ease-out !important;
+	z-index: 2;
+}
+
+.tb-mobile-header > .wrap {
+	height: unset;
+	padding: 0;
+}
+
+.tb-mobile-header .site-logo img {
+	max-height: 50px;
+}
+
+.mobile-nav > li > a {
+	color: inherit;
+}
+
+.tb-nav-trigger .hamburger span {
+	background-color: white;
+}
+
+.tb-nav-trigger:hover .hamburger span  {
+	background-color: var(--color-designink-yellow);
+}
+
+/* --------------- Sticky Header Styles --------------- */
+
+.tb-sticky-header {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	text-align: right;
+	white-space: nowrap;
+}
+
+.tb-sticky-header > .wrap {
+	display: block;
+	height: unset;
+}
+
+.tb-sticky-header .site-logo {
+	float: left;
+	vertical-align: middle;
+}
+
+.tb-sticky-header .site-logo.image-logo {
+	padding: 0.25rem;
+}
+
+.tb-sticky-header .site-logo.text-logo {
+	padding: 0 0.25rem;
+}
+
+.tb-sticky-header .site-logo.text-logo a {
+	line-height: 50px;
+}
+
+.tb-sticky-header nav.menu-sticky {
+	display: inline-block;
+}
+
+/* ========================= Navigation Styles ========================= */
+
+/* --------------- All Navigation Styles --------------- */
+
+nav.header-nav li.menu-item > a.menu-btn,
+nav.menu-sticky li.menu-item > a.menu-btn {
+	padding: 0.5rem;
+	text-align: left;
+}
+
+nav.header-nav ul:not(.sub-menu) > li > a.menu-btn,
+nav.menu-sticky ul:not(.sub-menu) > li > a.menu-btn {
+	text-align: center;
+	white-space: nowrap;
+}
+
+nav.header-nav li.menu-item > a.menu-btn:hover,
+nav.menu-sticky li.menu-item > a.menu-btn:hover {
+	background: var(--color-designink-green);
+}
+
+nav.header-nav ul.sub-menu > li > a.menu-btn,
+nav.menu-sticky ul.sub-menu > li > a.menu-btn {
+	background-color: white;
+	max-width: 350px;
+	min-width: 150px;
+	white-space: nowrap;
+}
+
+nav.header-nav ul.tb-primary-menu,
+nav.menu-sticky ul.tb-primary-menu {
+	padding: 0;
+}
+
+nav.header-nav ul.tb-primary-menu ul.sub-menu,
+nav.menu-sticky ul.tb-primary-menu ul.sub-menu {
+	background: transparent;
+	padding: 0;
+	width: unset;
+}
+
+nav.header-nav ul.sub-menu ul,
+nav.menu-sticky ul.sub-menu ul {
+	margin: 0;
+}
+
+nav.header-nav svg.sub-indicator,
+nav.menu-sticky svg.sub-indicator {
+	margin-right: 0;
+	/* Fix caret being too tall for button */
+	margin-top: -1px;
+	position: relative;
+	right: unset;
+	top: unset;
+	transform: unset;
+}
+
+nav.header-nav ul.sub-menu svg.sub-indicator,
+nav.menu-sticky ul.sub-menu svg.sub-indicator {
+	float: right;
+}
+
+/* --------------- Primary Navigation Styles --------------- */
+
+nav.header-nav ul.tb-primary-menu {
+	text-align: center;
+}
+
+/* Remove float and set to inline-block to apply menu centering. */
+nav.header-nav ul.tb-primary-menu > li.menu-item {
+	display: inline-block;
+	float: none;
+}
+
+nav.header-nav ul.tb-primary-menu a.menu-btn {
+	color: #333;
+	font-size: 15px;
+	padding: 1rem;
+}
+
+nav.header-nav ul.tb-primary-menu ul.non-mega-sub-menu {
+	margin: 0;
+	padding: 0;
+}
+
+/* --------------- Sticky Navigation Styles --------------- */
+
+nav.menu-sticky ul.tb-primary-menu > li > a.menu-btn {
+	padding: 0 0.5rem;
+}
+
+nav.menu-sticky ul.tb-primary-menu {
+	font-size: 0;
+	white-space: nowrap;
+}
+
+nav.menu-sticky ul.tb-primary-menu > li.menu-item {
+	display: inline-block;
+	float: none;
+	height: unset;
+}
+
+nav.menu-sticky li.menu-item a.menu-btn {
+	top: unset;
+	transform: unset;
+	-webkit-transform: unset;
+}
+
+/* ========================= Body Styles ========================= */
+
+html body {
+	background: unset;
+}
+
+/* These two rules need to be selected by ID, there are no other consistencies. */
+#main,
+#custom-main {
+	position: relative;
+	z-index: 2;
+}
+
+html .site-inner {
+	background: unset;
+}
+
+section.element-section {
+	padding: 60px 0;
+}
+
+html .label {
+	color: unset;
+}
+
+.button,
+.woocommerce .button,
+.btn-default,
+input[type='submit'],
+input[type='button'],
+.btn {
+	background-color: #F0F0F0;
+	border: #DDD solid 1px;
+	box-shadow: unset;
+	color: #222;
+	font-size: 0.86rem;
+	margin: 0.25rem;
+	padding: 0.75rem 1rem;
+	text-align: center;
+	transition: all 0.25s;
+	white-space: unset;
+}
+
+.button:hover,
+.woocommerce .button:hover,
+.btn-default:hover,
+input[type='submit']:hover,
+input[type='button']:hover,
+.btn:hover {
+	background-color: #FFF;
+	border: gray solid 1px;
+	color: #222;
+}
+
+html .entry-content .themeblvd-video-wrapper {
+	margin: 0 auto;
+}
+
+.row > .col:first-child {
+	margin-top: 0 !important;
+}
+
+.row > .col:last-child {
+	margin-bottom: 0 !important;
+}
+
+html .fixed-sidebar .widget {
+	background: unset;
+	padding: unset;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: inherit;
+	font-weight: inherit;
+}
+
+/* --------------- Post List Styles --------------- */
+
+html .post_list article.post {
+	margin: 0;
+	padding: 1.5rem 0;
+}
+
+html .post_list article.post::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+html .post_list article.post .thumb-wrapper {
+	float: left;
+	margin-right: 1rem;
+	position: relative;
+}
+
+html .post_list article.post header.entry-header .clearfix {
+	clear: none !important;
+}
+
+html .post_list article.post header.entry-header .clearfix::after {
+	clear: none !important;
+}
+
+/* --------------- Woocommerce Styles --------------- */
+
+.order-actions a.button,
+.woocommerce-orders-table__cell-order-actions a.button {
+	margin: 0 0.1rem;
+}
+
+/* --------------- Mobile Panel Styles --------------- */
+
+.tb-mobile-panel {
+	background-color: var(--color-designink-blue);
+	color: white;
+}
+
+.tb-mobile-panel .header-text,
+.tb-mobile-panel .tb-mobile-menu > li > .menu-btn {
+	color: inherit;
+}
+
+/* ========================= Footer Styles ========================= */
+
+.site-copyright {
+	font-size: inherit;
+}
+
+.site-copyright .tb-social-icons a.tb-icon {
+	font-size: 2rem;
+}
+
+/* ========================= Media Queries ========================= */
+
+@media(max-width: 991px) {
+
+	section.element-section {
+		padding: 30px;
+	}
+
+}

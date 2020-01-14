@@ -1,0 +1,252 @@
+/* ========================= CSS Variables Rules ========================= */
+
+:root {
+	--color-designink-yellow: #d9e021;
+	--color-designink-text: #333;
+	--color-designink-green: #8cc63f;
+	--color-designink-blue: #00546B;
+	--color-designink-lightblue: #0896bc;
+}
+
+/* ========================= Global Rules ========================= */
+
+* {
+	background-repeat: no-repeat;
+	/* box-sizing: border-box; */
+	/* position: relative; */
+	/* transition-duration: 0.15ms; */
+	/* -webkit-box-sizing: border-box; */
+}
+
+html, body {
+	font-size: 16px;
+	margin: 0;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	transition-duration: 0.15s;
+}
+
+img {
+	max-width: 100%;
+}
+
+input[type=submit] {
+	-webkit-appearance: none;
+}
+
+/* ========================= Inline Styles ========================= */
+
+.align-bottom {
+	vertical-align: bottom !important;
+}
+
+.align-middle {
+	vertical-align: middle !important;
+}
+
+.align-top {
+	vertical-align: top !important;
+}
+
+.bg-center {
+	background-position: center center !important;
+}
+
+.bg-bottom {
+	background-position: bottom center !important;
+}
+
+.bg-left {
+	background-position: center left !important;
+}
+
+.bg-contain {
+	background-size: contain !important;
+}
+
+.bg-cover {
+	background-size: cover !important;
+}
+
+.button,
+.btn-default,
+input[type='submit'],
+input[type='button'],
+.btn {
+	border-radius: 0.1rem;
+	cursor: pointer;
+	display: inline-block;
+}
+
+.button:focus,
+input[type='submit']:focus,
+input[type='button']:focus,
+.btn:focus {
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5);
+}
+
+.btn.block {
+	display: block !important;
+	width: 100% !important;
+}
+
+.clearfix {
+	clear: both !important;
+}
+
+.float-right {
+	float: right !important;
+}
+
+.float-left {
+	float: left !important;
+}
+
+.inline-block {
+	display: inline-block !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+
+.text-left {
+	text-align: left !important;
+}
+
+.text-right {
+	text-align: right !important;
+}
+
+.vertical-center {
+	position: absolute !important;
+	top: 50% !important;
+	transform: translateY(-50%) !important;
+	width: 100%;
+}
+
+/* ========================= Grid Layout ========================= */
+
+row,
+html .row {
+	font-size: 0;
+	margin: 0 !important;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+row::after,
+html .row::after {
+	clear: both;
+	content: "";
+	display: block;
+}
+
+row > *,
+html .row  > * {
+	font-size: 1rem;
+	user-select: text;
+	-webkit-user-select: text;
+}
+
+row > column {
+	width: 100%;
+}
+
+row > column,
+html .row > .col {
+	display: inline-block;
+	float: none;
+	vertical-align: top;
+}
+
+row > column.half,
+.row > .col.half {
+	width: 50%
+}
+
+row > column.third,
+.row > .col.third {
+	width: 33.33%
+}
+
+row > column.fourth,
+.row > .col.fourth {
+	width: 25%
+}
+
+row > column.fifth,
+.row > .col.fifth {
+	width: 20%
+}
+
+row > column.two-thirds,
+.row > .col.two-thirds {
+	width: 66.66%
+}
+
+row > column.three-fourths,
+.row > .col.three-fourths {
+	width: 75%;
+}
+
+row > column.square::after,
+.row > .col.square::after {
+	content: "";
+	display: block;
+	padding-top: 100%;
+}
+
+row > column.square > *,
+.row > .col.square > * {
+	position: absolute;
+	width: 100%;
+}
+
+/* ========================= Media Queries ========================= */
+
+/* --------------- Laptop/Desktop Styles --------------- */
+@media(min-width: 992px) {
+
+	.hide-desktop {
+		display: none !important;
+	}
+
+}
+
+/* --------------- Phone Styles --------------- */
+@media(max-width: 767px) {
+
+	row > column.small,
+	.row > div[class*="col-sm-"] {
+		width: 100%;
+	}
+
+}
+
+/* --------------- Phone/Tablet Styles --------------- */
+@media(max-width: 991px) {
+
+	.hide-mobile {
+		display: none !important;
+	}
+
+	row > column.medium,
+	.row > div[class*="col-md-"] {
+		width: 100%;
+	}
+
+}
+
+/* --------------- Phone/Tablet/Laptop Styles --------------- */
+@media(max-width: 1200px) {
+
+	row > column.large,
+	.row > div[class*="col-lg-"] {
+		width: 100%;
+	}
+
+}
