@@ -23,7 +23,3 @@ brings added features to Jump Start's theme options for a dynamic, fixed mobile 
 In the admin panel, there are a few options under ```Settings > DesignInk Utility Settings```. If you do not want to use the custom Jump Start styles or the
 inline-block styles, you can uncheck the option for **_Use Custom Styles_**. The **_Custom Plugin Updates SSL_** option is only for use in conjunction with the
 [DesignInk Plugin Update Server](https://github.com/kyle-niemiec/designink-plugin-update-server) if using a private GitHub repository to provide plugin updates.
-
-## Child Theme Installer
-
-To install the Jump Start child theme template, go to ```Appearance > DesignInk Child Theme Installer```

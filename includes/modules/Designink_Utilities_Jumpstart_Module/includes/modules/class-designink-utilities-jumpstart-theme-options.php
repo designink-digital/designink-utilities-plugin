@@ -23,7 +23,7 @@
 
 defined( 'ABSPATH' ) or exit;
 
-use Designink\WordPress\v1_0_0\Plugin\Module;
+use Designink\WordPress\Framework\v1_0_1\Module;
 
 if ( ! class_exists( 'Designink_Utilities_Jumpstart_Theme_Options', false ) ) {
 
@@ -36,7 +36,7 @@ if ( ! class_exists( 'Designink_Utilities_Jumpstart_Theme_Options', false ) ) {
 		 * Entry point.
 		 */
 		final public static function construct() {
-			if ( 'yes' === Designink_Utilities_Jumpstart_Module::get_use_jumpstart_option() ) {
+			if ( 'yes' === Designink_Utilities_Jumpstart_Settings::get_use_jumpstart_option() ) {
 				add_filter('after_setup_theme', array(__CLASS__, '_after_setup_theme'));
 				add_action('wp_enqueue_scripts', array(__CLASS__, '_wp_enqueue_scripts'), 21);
 			}
@@ -64,9 +64,9 @@ if ( ! class_exists( 'Designink_Utilities_Jumpstart_Theme_Options', false ) ) {
 		 */
 		final protected static function enqueue_reorder_theme_styles() {
 			$Plugin = Designink_Utilities_Plugin::instance();
-			$Plugin->enqueue_css( 'designink-utility-classes.css' );
-			$Plugin->enqueue_css( 'designink-jumpstart-defaults.css' );
-			$Plugin->enqueue_js( 'designink-viewport-repeat-script.js' );
+			$Plugin->enqueue_css( 'designink-utility-classes' );
+			$Plugin->enqueue_css( 'designink-jumpstart-defaults' );
+			$Plugin->enqueue_js( 'designink-viewport-repeat-script' );
 
 			wp_dequeue_style( 'themeblvd-theme' );
 			wp_enqueue_style( 'themeblvd-theme', esc_url( get_stylesheet_uri() ) );
@@ -74,7 +74,7 @@ if ( ! class_exists( 'Designink_Utilities_Jumpstart_Theme_Options', false ) ) {
 			$mobile_header_is_fixed = 'fixed' === themeblvd_get_option('ds_fixed_mobile_header');
 
 			if ( $mobile_header_is_fixed ) {
-				$Plugin->enqueue_js( 'designink-mobile-header-controller.js' );
+				$Plugin->enqueue_js( 'designink-mobile-header-controller' );
 			}
 
 			$header_is_full_width = 'full' === themeblvd_get_option( 'ds_full_width_header' );

@@ -1,10 +1,9 @@
 <?php
 /**
  * Plugin Name: DesignInk Utilities Plugin
- * Plugin ID: di-update/plugin/designink-utilities-plugin
  * Plugin URI: https://designinkdigital.com/
  * Description: The complete set of custom WordPress development solutions created by DesignInk Digital.
- * Version: 3.0.0
+ * Version: 3.0.1
  * Author: DesignInk Digital
  * Author URI: https://designinkdigital.com/
  * Text Domain: wporg
@@ -23,17 +22,30 @@
 
 defined( 'ABSPATH' ) or exit;
 
-use Designink\WordPress\v1_0_0\Plugin;
+use Designink\WordPress\Framework\v1_0_1\Plugin;
+use Designink\WordPress\Plugin_Update_Helper\v1_0_0\Plugin_Helper_Update_List;
 
 // Include DesignInk's framework
-require __DIR__ . '/vendor/designink/designink-wp-framework/index.php';
+require_once __DIR__ . '/vendor/designink/designink-wp-framework/index.php';
+
+// Include the plugin update helper
+require_once __DIR__ . '/vendor/designink/plugin-update-helper/index.php';
 
 if ( ! class_exists( 'Designink_Utilities_Plugin', false ) ) {
 
 	/**
 	 * The plugin wrapper class.
 	 */
-	final class Designink_Utilities_Plugin extends Plugin { }
+	final class Designink_Utilities_Plugin extends Plugin {
+
+		/**
+		 * Plugin entry point
+		 */
+		final public static function construct() {
+			Plugin_Helper_Update_List::add_plugin( 'designink-utilities-plugin', 'https://designinkdigital.com/' );
+		}
+
+	}
 
 	// Start it up.
 	Designink_Utilities_Plugin::instance();

@@ -21,11 +21,11 @@
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
-defined('ABSPATH') or exit;
+defined( 'ABSPATH' ) or exit;
 
-use Designink\WordPress\v1_0_0\Plugin\Module;
+use Designink\WordPress\Framework\v1_0_1\Module;
 
-if ( ! class_exists( 'Designink_Utilities_Gdpr_Plugin_Manager', FALSE)) {
+if ( ! class_exists( 'Designink_Utilities_Gdpr_Plugin_Manager', false ) ) {
 
 	/**
 	 * A module for managing how we want the GDPR plugin to look and act.
@@ -44,8 +44,8 @@ if ( ! class_exists( 'Designink_Utilities_Gdpr_Plugin_Manager', FALSE)) {
 		 */
 		final public static function _wp_enqueue_scripts() {
 			$Plugin = Designink_Utilities_Plugin::instance();
-			$Plugin->enqueue_css( 'designink-gdpr-consent.css' );
-			$Plugin->enqueue_js( 'designink-gdpr-consent.js' );
+			$Plugin->enqueue_css( 'designink-gdpr-consent' );
+			$Plugin->enqueue_js( 'designink-gdpr-consent' );
 		}
 
 	}

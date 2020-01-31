@@ -23,7 +23,7 @@
 
 defined( 'ABSPATH' ) or exit;
 
-use Designink\WordPress\v1_0_0\Plugin\Module;
+use Designink\WordPress\Framework\v1_0_1\Module;
 
 if ( ! class_exists( 'Designink_Utilities_Jumpstart_Functions', false ) ) {
 
@@ -36,7 +36,7 @@ if ( ! class_exists( 'Designink_Utilities_Jumpstart_Functions', false ) ) {
 		 * Entry point.
 		 */
 		final public static function construct() {
-			if ( 'yes' === Designink_Utilities_Jumpstart_Module::get_use_jumpstart_option() ) {
+			if ( 'yes' === Designink_Utilities_Jumpstart_Settings::get_use_jumpstart_option() ) {
 				add_filter( 'setup_theme', array( __CLASS__, '_setup_theme' ) );
 			}
 		}

@@ -21,26 +21,27 @@
  * @license   http://www.gnu.org/licenses/gpl-3.0.html GNU General Public License v3.0
  */
 
+namespace Designink\WordPress\Framework\v1_0_1\Plugin\Admin\Settings_Page;
+
 defined( 'ABSPATH' ) or exit;
 
-use Designink\WordPress\v1_0_0\Plugin\Admin\Settings_Page\Settings_Section;
-use Designink\WordPress\v1_0_0\Plugin\Admin\Settings_Page\Options_Settings_Page;
+use Designink\WordPress\Framework\v1_0_1\Plugin\Admin\Settings_Page\Options_Settings_Page;
 
-if ( ! class_exists( 'Designink_Utilities_Admin_Settings_Page', false ) ) {
+if ( ! class_exists( '\Designink\WordPress\Framework\v1_0_1\Plugin\Admin\Settings_Page\Designink_Settings_Page', false ) ) {
 
 	/**
 	 * The options page configuration for general settings regarding the modules included in this plugin.
 	 */
-	final class Designink_Utilities_Admin_Settings_Page extends Options_Settings_Page {
+	final class Designink_Settings_Page extends Options_Settings_Page {
 
 		/** @var string The page option group. */
-		final public static function page_option_group() { return 'designink_utilities_settings'; }
+		final public static function page_option_group() { return 'designink-settings'; }
 
 		/** @var string The page title. */
-		final public static function page_title() { return 'DesignInk Utility Settings'; }
+		final public static function page_title() { return 'DesignInk Settings'; }
 
 		/** @var string The page menu title. */
-		final public static function menu_title() { return 'DesignInk Utility Settings'; }
+		final public static function menu_title() { return 'DesignInk Settings'; }
 
 		/** @var string The page capability. */
 		final public static function page_capability() { return 'manage_options'; }
@@ -50,31 +51,6 @@ if ( ! class_exists( 'Designink_Utilities_Admin_Settings_Page', false ) ) {
 		 */
 		final public function __construct() {
 			parent::__construct();
-		}
-
-		/**
-		 * Create the settings page. This function is hooked statically from _admin_menu, so use the Module Singleton $instance to reference what would be $this.
-		 */
-		final public function create_temporary_sections() {
-			$this->add_section( new Settings_Section(
-				$this,
-				'plugin_updates_ssl_options',
-				array(
-					'label' => __( "Plugin Updates SSL Options" ),
-					'description' => __( "The SSL key and initialization vector for custom plugin updates if using encryption for a private key." ),
-					'inputs' => array(
-						array(
-							'label' => __( "SSL Key" ),
-							'key' => 'key',
-						),
-						array(
-							'label' => __( "SSL IV" ),
-							'key' => 'iv',
-						),
-					),
-				)
-			) );
-
 		}
 
 	}

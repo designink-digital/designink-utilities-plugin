@@ -1,6 +1,13 @@
 {
+	"name": "DesignInk Utilities Plugin",
 	"description": "The complete set of custom WordPress development solutions created by DesignInk Digital.",
+	"license": "GPL-3.0",
     "require": {
-        "designink/designink-wp-framework": "^1.0"
-    }
+        "designink/designink-wp-framework": "^1.0.1",
+		"designink/plugin-update-helper": "^1.0"
+	},
+	"authors": [{
+		"name": "Kyle Niemiec",
+		"email": "kyle@designinkdigital.com"
+	}]
 }
